@@ -1,3 +1,259 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "airbnb-typescript/base",
+    "plugin:prettier/recommended",
+    "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "react",
+    "react-hooks",
+    "import"
+  ],
+  "env": {
+    "browser": true
+  },
+  "ignorePatterns": [
+    ".eslintrc.json"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
+  "globals": {
+    "JSX": "readonly"
+  },
+  "rules": {
+    "@typescript-eslint/require-await": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/default-param-last": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/allowArgumentsExplicitlyTypedAsAny": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@next/next/no-img-element": "off",
+    "no-empty": "off",
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/no-unsafe-argument": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": [
+          "jsx",
+          "global"
+        ]
+      }
+    ],
+    "keyword-spacing": 2,
+    "space-before-blocks": 2,
+    "bracketSpacing": 0,
+    "global-require": 0,
+    "import/no-relative-packages": 0,
+    "import/no-import-module-exports": 0,
+    "import/no-unresolved": 0,
+    "import/namespace": 0,
+    "import/no-named-as-default": 0,
+    "import/named": 0,
+    "react/no-namespace": 0,
+    "react/jsx-no-target-blank": 0,
+    "react/no-invalid-html-attribute": 0,
+    "react/jsx-no-constructed-context-values": 0,
+    "react/no-unused-class-component-methods": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react/prefer-exact-props": 0,
+    "react/no-unescaped-entities": 0,
+    "react/jsx-filename-extension": 0,
+    "react/no-arrow-function-lifecycle": 0,
+    "react-hooks/exhaustive-deps": "warn",
+    "react/function-component-definition": [
+      2,
+      {
+        "unnamedComponents": "function-expression"
+      }
+    ],
+    "default-param-last": 0,
+    "no-debugger": 0,
+    "no-alert": 0,
+    "import/order": [
+      1,
+      {
+        "groups": [
+          "external",
+          "builtin",
+          "internal",
+          "sibling",
+          "parent",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "components",
+            "group": "internal"
+          },
+          {
+            "pattern": "common",
+            "group": "internal"
+          },
+          {
+            "pattern": "routes/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "assets/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "internal"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "all"
+      }
+    ],
+    "arrow-body-style": [
+      2,
+      "as-needed"
+    ],
+    "no-unused-expressions": [
+      2,
+      {
+        "allowTaggedTemplates": true
+      }
+    ],
+    "no-param-reassign": [
+      2,
+      {
+        "props": false
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "function",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "function"
+      },
+      {
+        "blankLine": "always",
+        "prev": "block",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "block"
+      },
+      {
+        "blankLine": "always",
+        "prev": "multiline-block-like",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "multiline-block-like"
+      },
+      {
+        "blankLine": "always",
+        "prev": "multiline-expression",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "multiline-expression"
+      }
+    ],
+    "spaced-comment": 2,
+    "no-trailing-spaces": 2,
+    "import/prefer-default-export": 0,
+    "import": 0,
+    "func-names": "off",
+    "space-before-function-paren": 0,
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "react/prop-types": 0,
+    "import/extensions": 0,
+    "no-underscore-dangle": 0,
+    "consistent-return": 0,
+    "react/display-name": 0,
+    "react/no-array-index-key": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/prefer-stateless-function": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-props-no-spreading": 0,
+    "jsx-a11y/accessible-emoji": 0,
+    "react/require-default-props": 0,
+    "radix": 0,
+    "no-shadow": "off",
+    "quotes": [
+      2,
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "none",
+        "singleQuote": true,
+        "printWidth": 140
+      }
+    ]
+  }
 }
