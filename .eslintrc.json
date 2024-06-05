@@ -63,15 +63,6 @@
     "no-empty": "off",
     "import/no-extraneous-dependencies": "off",
     "@typescript-eslint/no-unsafe-argument": "off",
-    "no-console": [
-      "error",
-      {
-        "allow": [
-          "warn",
-          "error"
-        ]
-      }
-    ],
     "react/no-unknown-property": [
       2,
       {
