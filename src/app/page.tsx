@@ -1,9 +1,6 @@
-import React from 'react';
+import Hero from '@/components/hero';
+import homeImage from 'public/images/home.jpg';
 
 export default function Home() {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+  return <Hero title="Professional Cloud Hosting" imageAlt="car factory" imageData={homeImage} />;
 }
