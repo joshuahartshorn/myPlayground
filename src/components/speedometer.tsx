@@ -50,10 +50,10 @@ export default function Speedometer({ value }: SpeedometerProps) {
       />
 
       <circle cx={circleX} cy={circleY} r="12" fill="none" stroke="white" strokeWidth={4} />
-      <text x={svgCenterX} y="80" textAnchor="middle" fontSize="32" fontWeight="500" dy=".3em">
+      <text x={svgCenterX} y="100" textAnchor="middle" fontSize="32" fontWeight="500" dy=".3em">
         {value}
       </text>
-      <text x={svgCenterX} y="115" textAnchor="middle" fontSize="16" fontWeight={200} color="grey" dy=".3em">
+      <text x={svgCenterX} y="140" textAnchor="middle" fontSize="16" fontWeight={200} color="grey" dy=".3em">
         out of 10
       </text>
     </svg>
