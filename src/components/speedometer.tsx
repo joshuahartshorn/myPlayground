@@ -2,6 +2,8 @@ interface SpeedometerProps {
   value: number;
 }
 
+// TODO: Write some tests for this component
+
 export default function Speedometer({ value }: SpeedometerProps) {
   const percentage = (Math.min(Math.max(value, 0), 10) / 10) * 100;
   const angle = (percentage / 100) * 180 - 180; // angle in degrees
