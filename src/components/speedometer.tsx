@@ -1,10 +1,11 @@
 interface SpeedometerProps {
   value: number;
+  text: string;
 }
 
 // TODO: Write some tests for this component
 
-export default function Speedometer({ value }: SpeedometerProps) {
+export default function Speedometer({ value, text }: SpeedometerProps) {
   const percentage = (Math.min(Math.max(value, 0), 10) / 10) * 100;
   const angle = (percentage / 100) * 180 - 180; // angle in degrees
   const svgCenterX = 320 / 2; // 160
@@ -56,7 +57,7 @@ export default function Speedometer({ value }: SpeedometerProps) {
         {value}
       </text>
       <text x={svgCenterX} y="140" textAnchor="middle" fontSize="16" fontWeight={200} color="grey" dy=".3em">
-        out of 10
+        {text}
       </text>
     </svg>
   );

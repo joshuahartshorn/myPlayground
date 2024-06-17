@@ -7,9 +7,6 @@ export default function Header() {
         <Link href="/" className="font-bold text-3xl">
           Home
         </Link>
-        <div className="space-x-4 text-xl">
-          <Link href="/snippets/new">Snippets</Link>
-        </div>
       </nav>
     </div>
   );
